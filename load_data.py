@@ -163,15 +163,16 @@ add_review = """INSERT INTO reviews_raw(
                                     review_date)
                                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
 
+""" Write the data from the dataframe to the SQL table """
 print("Writing the data into the Database! Please wait...")
 for row_number in range(dataFrame1.shape[0]):
     data_review = tuple(str(element) for element in dataFrame1.iloc[row_number])
-    # Communicate the progress after every 5000 rows uploads
-    if((row_number+1)%5000==0):
-        print(row_number+1," rows added")
     # Insert new review row
     cursor.execute(add_review, data_review)
     cnx.commit()
+    # Communicate the progress after every 5000 rows uploads
+    if((row_number+1)%5000==0):
+        print(row_number+1," rows added")
 
 
 # Make sure data is committed to the database
