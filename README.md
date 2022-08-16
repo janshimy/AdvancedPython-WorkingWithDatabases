@@ -3,10 +3,10 @@ This repository shows how you can work with the databases and execute SQL comman
 This repo contains two python scripts with each scripts showing the setup required to have your environment ready to run the scripts
 The scripts let the user know what it is doing at every step of the way via messages to the console.
 
-This worked with the amazon rating data from any review category that the user would choose. The categories include ratings for Wireless, Books, Gift Card, among others. And the link to each category data is found in this txt file:
+This works with the amazon rating data from any review category that the user would choose. The categories include ratings for Wireless, Books, Gift Card, among others. And the link to each category data is found in this txt file:
 https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt
 
-What this codes do is to go through this txt file seeking the link to the dataset of a specified category. When the link is found, the script download the data from the link and the data is downloaded as a gzipped tsv file. 
+This codes go through the above txt file seeking the link to the dataset of a specified category. When the link is found, the script download the data from the link and the data is downloaded as a gzipped tsv file. The file is unzipped and loaded into pandas dataframe. 
 
 After that, the scripts executes some SQL commands defined within itself and load the data into a table in a certain database whether on remote server or localhost.
 
