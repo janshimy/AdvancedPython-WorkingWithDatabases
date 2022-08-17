@@ -61,8 +61,8 @@ if __name__ == '__main__':
     # Handle missing/empty arguments
     args = argumentsHandler(args)
     # Define the database credentials
-    user = 'JNSHIMY'
-    my_password = 'ZS674K81'
+    user = 'your_username'
+    my_password = 'your_password'
     host_server = 'msba-bootcamp-prod.cneftpdd0l3q.us-east-1.rds.amazonaws.com'
     port_number = 3306
     database_name = 'MSBA_Team13'
