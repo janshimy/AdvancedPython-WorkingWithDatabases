@@ -97,7 +97,7 @@ except mysql.connector.Error as err:
 else:
     cnx.close()
 
-# Creeate an empty dictionary to store table names and their respective SQL design codes 
+# Create an empty dictionary to store table names and their respective SQL design codes 
 TABLES = {}
 # Design the tables using the SQL scripts
 TABLES['reviews_raw'] = (
