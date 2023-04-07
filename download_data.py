@@ -63,9 +63,9 @@ if __name__ == '__main__':
     # Define the database credentials
     user = 'your_username'
     my_password = 'your_password'
-    host_server = 'msba-bootcamp-prod.cneftpdd0l3q.us-east-1.rds.amazonaws.com'
+    host_server = 'sample-rds.cneftpdd0l3q.us-east-1.rds.amazonaws.com'
     port_number = 3306
-    database_name = 'MSBA_Team13'
+    database_name = 'myrdsschema'
     table_to_download = args.tablename
     # Save dataframe into the csv file
     print("Loading the data from SQL table to Pandas Dataframe...")
